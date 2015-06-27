@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Foo bar",
+  "version": "1.0",
+  "description": "This is a meaningful chrome extension.",
+  "icons": { 
+    "128": "icon_128.png",
+    "16": "icon_16.png"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "commands" : {
+    "foo": {
+      "global": true,
+      "description": "Super cool command",
+      "suggested_key": {
+        "mac": "Command+Shift+6"
+      }
+    }
+  },
+  "permissions": [
+    "https://en.wikipedia.org/*",
+    "http://en.wikipedia.org/*",
+    "tabs",
+    "clipboardRead",
+    "contextMenus",
+    "contentSettings",
+    "declarativeContent",
+    "desktopCapture",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "FOOBAR",
+    "default_icon": "icon_16.png",
+    "default_popup": "window.html"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["inception.js"],
+    "css": ["inception.css"]
+  }]
+}

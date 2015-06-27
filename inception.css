@@ -1,0 +1,7 @@
+/*
+ *This file will be loaded into the DOM of the webpage a user visits because it is included in the manifest.json file as a `content_script`
+ */
+
+html body {
+  background-color: lightyellow !important;
+}
