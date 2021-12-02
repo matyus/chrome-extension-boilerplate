@@ -30,7 +30,7 @@
     "desktopCapture",
     "storage"
   ],
-  "browser_action": {
+  "action": {
     "default_title": "FOOBAR",
     "default_icon": "icon_16.png",
     "default_popup": "window.html"
